@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>CSS position property demo</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
     body {
       margin: 0;
@@ -16,25 +17,14 @@
       margin: 1rem;
     }
 
-    .demo {
-      width: 120px;
-      height: 80px;
-      background: #4f46e5;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      border-radius: 8px;
-    }
-
     /* 1. static (default) */
-    #static .demo {
+    #static .box {
       position: static; /* default */
+      background: #2699dc;
     }
 
     /* 2. relative */
-    #relative .demo {
+    #relative .box {
       position: relative;
       top: 20px;
       left: 20px;
@@ -46,7 +36,7 @@
       position: relative; /* containing block */
     }
 
-    #absolute .demo {
+    #absolute .box {
       position: absolute;
       top: 10px;
       right: 10px;
@@ -54,7 +44,7 @@
     }
 
     /* 4. fixed (viewport‑relative) */
-    #fixed .demo {
+    #fixed .box {
       position: fixed;
       bottom: 20px;
       right: 20px;
@@ -86,19 +76,19 @@
 
   <section id="static">
     <h2>static (default)</h2>
-    <div class="demo">static</div>
+    <div class="box">static</div>
     <p>The element participates in normal document flow. Scroll to see more sections.</p>
   </section>
 
   <section id="relative">
     <h2>relative</h2>
-    <div class="demo">relative</div>
+    <div class="box">relative</div>
     <p>The element is offset <code>top:20px; left:20px</code> but still takes up its original space.</p>
   </section>
 
   <section id="absolute">
     <h2>absolute</h2>
-    <div class="demo">absolute</div>
+    <div class="box">absolute</div>
     <p>The green box is absolutely positioned 10&nbsp;px from the top‑right of this section (its nearest positioned ancestor).</p>
   </section>
 
@@ -111,7 +101,7 @@
   
   <section id="fixed">
     <h2>fixed</h2>
-    <div class="demo">fixed</div>
+    <div class="box">fixed</div>
     <p>The blue box stays fixed to the bottom‑right corner of the viewport, even while scrolling.</p>
     <div class="spacer"></div>
   </section>

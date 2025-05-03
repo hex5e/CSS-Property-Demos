@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS margin property demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .container {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            padding: 15px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>CSS <code>margin</code> Demo</h1>
+    
+    <h2>1. Margin on all sides (equal)</h2>
+    <p>The default <code>margin</code> property applies in all outward directions</p>
+    
+    <div class="container">
+        <div class="box" style="margin: 20px; background-color: #e74c3c;">Default</div>
+    </div>
+
+    <h2>2. Individual margin sides</h2>
+    <p>Each margin direction can be defined through <code>margin-top</code>, <code>margin-right</code>, etc. </p>
+    
+    <div class="container">
+        <div class="box" style="margin-top: 10px;
+                                margin-right: 40px;
+                                margin-bottom: 30px;
+                                margin-left: 20px;
+                                background-color: #2ecc71;">Each Side</div>
+    </div>
+    
+    <h2>3. Margin shorthand (top, right, bottom, left)</h2>
+        <p>You can define the margin directions with the shorthand <br> <code>&nbsp;&nbsp;&nbsp;&nbsp;margin: TOPpx RIGHTpx BOTTOMpx LEFTpx;</code>
+        </p>
+    <div class="container">
+        <div class="box" style="margin: 15px 25px 15px 10px; background-color: #f39c12;">shorthand</div>
+    </div>
+    
+    <h2>4. Auto margin (for centering)</h2>
+    <div class="container">
+        
+        <div class="box" style="margin: 10px auto; background-color: #9b59b6;">Auto</div>
+    </div>
+    
+    <h2>5. Negative margin</h2>
+        <p>The 'Neg' box moves into 'Reference' because it has a negative margin setting. </p>
+    <div class="container">
+        <div style="padding-top: 30px;">
+            <div class="box">Reference</div>
+            <div class="box" style="margin-top: -20px; margin-left: 50px; background-color: #1abc9c;">Negative</div>
+        </div>
+    </div>
+
+    <h2>Margin Collapse</h2>
+        <p>The vertical space between 'Upper' and 'Lower' is the greater of the two margin settings, not the addition of both. </p>
+    
+    <div class="container" style="padding-top: 30px;">
+            <div class="box" style="margin-bottom:30px; background-color:#bc1f1a;">Upper</div>
+            <div class="box" style="margin-top:20px; background-color:#1a89bc;">Lower</div>
+
+    </div>
+
+</body>
+</html>
