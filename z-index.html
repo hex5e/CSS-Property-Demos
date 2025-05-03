@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS z-index property demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 40px;
+    }
+
+    .container {
+      position: relative;
+      width: 300px;
+      height: 250px;
+      border: 1px dashed #aaa;
+    }
+
+    .box {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    /* Three overlapping squares with different z‑index values */
+    .box.red {
+      background: #e63946;
+      z-index: 1;
+    }
+
+    .box.green {
+      background: #2a9d8f;
+      left: 60px;
+      top: 50px;
+      z-index: 2;
+    }
+
+    .box.blue {
+      background: #457b9d;
+      left: 100px;
+      top: 80px;
+      z-index: 3;
+    }
+
+    .note {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS <code>z-index</code> Demo</h1>
+
+  <div class="container">
+    <div class="box red">z-index: 1</div>
+    <div class="box green">z-index: 2</div>
+    <div class="box blue">z-index: 3</div>
+  </div>
+
+  <p class="note">
+    All three boxes are absolutely positioned inside the dashed container. Their
+    <code>z-index</code> values determine the stacking order: the blue box (3)
+    sits on top, the green box (2) is in the middle, and the red box
+    (1) is at the bottom. 
+  </p>
+</body>
+</html>

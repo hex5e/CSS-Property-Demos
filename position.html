@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CSS <code>position</code> Demonstration</title>
+  <title>CSS position property demo</title>
   <style>
     body {
       margin: 0;
@@ -82,7 +82,7 @@
   </style>
 </head>
 <body>
-  <h1>CSS <code>position</code> Property Demonstration</h1>
+  <h1>CSS <code>position</code> Property</h1>
 
   <section id="static">
     <h2>static (default)</h2>
@@ -100,9 +100,15 @@
     <h2>absolute</h2>
     <div class="demo">absolute</div>
     <p>The green box is absolutely positioned 10&nbsp;px from the top‑right of this section (its nearest positioned ancestor).</p>
-    <div class="spacer"></div>
   </section>
 
+  <section id="sticky">
+    <h2>sticky</h2>
+    <header>Sticky Header</header>
+    <p>Scroll past this section to see the orange header stick to the top until the section ends.</p>
+    <div class="spacer"></div>
+  </section>
+  
   <section id="fixed">
     <h2>fixed</h2>
     <div class="demo">fixed</div>
@@ -110,11 +116,5 @@
     <div class="spacer"></div>
   </section>
 
-  <section id="sticky">
-    <h2>sticky</h2>
-    <header>🔗 Sticky Header</header>
-    <p>Scroll past this section to see the orange header stick to the top until the section ends.</p>
-    <div class="spacer"></div>
-  </section>
 </body>
 </html>
