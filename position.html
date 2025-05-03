@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS <code>position</code> Demonstration</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    section {
+      border: 1px solid #aaa;
+      padding: 1rem;
+      margin: 1rem;
+    }
+
+    .demo {
+      width: 120px;
+      height: 80px;
+      background: #4f46e5;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    /* 1. static (default) */
+    #static .demo {
+      position: static; /* default */
+    }
+
+    /* 2. relative */
+    #relative .demo {
+      position: relative;
+      top: 20px;
+      left: 20px;
+      background: #dc2626;
+    }
+
+    /* 3. absolute (inside a positioned ancestor) */
+    #absolute {
+      position: relative; /* containing block */
+    }
+
+    #absolute .demo {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #16a34a;
+    }
+
+    /* 4. fixed (viewport‑relative) */
+    #fixed .demo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #0ea5e9;
+    }
+
+    /* 5. sticky */
+    #sticky header {
+      position: sticky;
+      top: 0;
+      background: #f59e0b;
+      padding: 0.5rem;
+      color: #000;
+      font-weight: bold;
+    }
+
+    /* helper for scrolling */
+    .spacer {
+      height: 150vh;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS <code>position</code> Property Demonstration</h1>
+
+  <section id="static">
+    <h2>static (default)</h2>
+    <div class="demo">static</div>
+    <p>The element participates in normal document flow. Scroll to see more sections.</p>
+  </section>
+
+  <section id="relative">
+    <h2>relative</h2>
+    <div class="demo">relative</div>
+    <p>The element is offset <code>top:20px; left:20px</code> but still takes up its original space.</p>
+  </section>
+
+  <section id="absolute">
+    <h2>absolute</h2>
+    <div class="demo">absolute</div>
+    <p>The green box is absolutely positioned 10&nbsp;px from the top‑right of this section (its nearest positioned ancestor).</p>
+    <div class="spacer"></div>
+  </section>
+
+  <section id="fixed">
+    <h2>fixed</h2>
+    <div class="demo">fixed</div>
+    <p>The blue box stays fixed to the bottom‑right corner of the viewport, even while scrolling.</p>
+    <div class="spacer"></div>
+  </section>
+
+  <section id="sticky">
+    <h2>sticky</h2>
+    <header>🔗 Sticky Header</header>
+    <p>Scroll past this section to see the orange header stick to the top until the section ends.</p>
+    <div class="spacer"></div>
+  </section>
+</body>
+</html>
