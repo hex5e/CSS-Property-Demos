@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property Examples</title>
+    <style>
+        /* Default div is block */
+        .block-example {
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 10px;
+            /* display: block; - this is default for div */
+        }
+        
+        /* Change div to inline */
+        .inline-example {
+            border: 2px solid red;
+            padding: 10px;
+            margin: 10px;
+            display: inline;
+        }
+        
+        /* Display as flex container */
+        .flex-example {
+            border: 2px solid green;
+            padding: 10px;
+            margin: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        /* Display as grid container */
+        .grid-example {
+            border: 2px solid purple;
+            padding: 10px;
+            margin: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+        
+        /* Common styling for child elements */
+        .item {
+            background-color: #f0f0f0;
+            border: 1px solid #999;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Display Property Examples</h1>
+    
+    <h2>Block (default for div)</h2>
+    <div class="block-example">
+        This is a block element. It takes up the full width available.
+    </div>
+    <div class="block-example">
+        This is another block element. Notice how it starts on a new line.
+    </div>
+    
+    <h2>Inline</h2>
+    <div class="inline-example">
+        This is an inline element.
+    </div>
+    <div class="inline-example">
+        This is another inline element. Notice how they flow together.
+    </div>
+    
+    <h2>Flex</h2>
+    <div class="flex-example">
+        <div class="item">Flex Item 1</div>
+        <div class="item">Flex Item 2</div>
+        <div class="item">Flex Item 3</div>
+    </div>
+    
+    <h2>Grid</h2>
+    <div class="grid-example">
+        <div class="item">Grid Item 1</div>
+        <div class="item">Grid Item 2</div>
+        <div class="item">Grid Item 3</div>
+        <div class="item">Grid Item 4</div>
+        <div class="item">Grid Item 5</div>
+        <div class="item">Grid Item 6</div>
+    </div>
+
+    
+</body>
+</html>
