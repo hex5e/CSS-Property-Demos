@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS transition property demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .row {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .box {
+      background: #6366f1;
+      color: #fff;
+      min-width: 140px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.4s, transform 0.4s, box-shadow 0.4s;
+      /* The transition property is the star of this demo! */
+    }
+    .box:hover {
+      background: #f59e42;
+      transform: scale(1.15) rotate(-3deg);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    }
+    .box.no-transition {
+      transition: none;
+    }
+    .box.no-transition:hover {
+      background: #f59e42;
+      transform: scale(1.15) rotate(-3deg);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS <code>transition</code> Demo</h1>
+  <h2>With transition</h2>
+  <div class="row">
+    <div class="box" style="padding: 30px 40px;">
+      Hover me!<br>
+      <small><code>transition: background 0.4s, transform 0.4s, box-shadow 0.4s;</code></small>
+    </div>
+  </div>
+  <h2>Without transition</h2>
+  <div class="row">
+    <div class="box no-transition" style="padding: 30px 40px;">
+      Hover me!<br>
+      <small><code>transition: none;</code></small>
+    </div>
+  </div>
+  <p>
+    The <code>transition</code> property lets you animate changes to CSS properties smoothly.<br>
+    Try hovering over both boxes above. The first animates smoothly; the second changes instantly.
+  </p>
+</body>
+</html>
