@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS display: table demo</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .row {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .table-demo {
+      display: table;
+      border-collapse: collapse;
+      background: #f3f4f6;
+      border: 2px solid #6366f1;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      min-width: 320px;
+    }
+    .table-row {
+      display: table-row;
+    }
+    .table-cell {
+      display: table-cell;
+      border: 1px solid #6366f1;
+      padding: 1rem;
+      vertical-align: middle;
+      text-align: center;
+      min-width: 80px;
+    }
+    .box.table-cell {
+      /* Inherit .box, but allow table-cell sizing */
+      width: auto;
+      height: auto;
+      background: #6366f1;
+      color: #fff;
+      border-radius: 0;
+      font-weight: normal;
+    }
+    .box.header {
+      background: #f59e42;
+      font-weight: bold;
+    }
+    .box.alt {
+      background: #16a34a;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS <code>display: table</code> Demo</h1>
+  <p><a href="../index.html">Back to Home</a></p>
+
+  <h2>Basic table layout</h2>
+  <div class="table-demo">
+    <div class="table-row">
+      <div class="box table-cell header">Header 1</div>
+      <div class="box table-cell header">Header 2</div>
+      <div class="box table-cell header">Header 3</div>
+    </div>
+    <div class="table-row">
+      <div class="box table-cell">A</div>
+      <div class="box table-cell alt">B</div>
+      <div class="box table-cell">C</div>
+    </div>
+    <div class="table-row">
+      <div class="box table-cell alt">D</div>
+      <div class="box table-cell">E</div>
+      <div class="box table-cell alt">F</div>
+    </div>
+  </div>
+
+</body>
+</html>

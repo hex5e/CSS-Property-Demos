@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS float property demo</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .row {
+      margin-bottom: 2rem;
+    }
+    .float-container {
+      background: #f3f4f6;
+      border: 2px solid #6366f1;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      min-height: 100px;
+      overflow: auto;
+    }
+    .box {
+      margin-bottom: 0.5rem;
+    }
+    .float-left {
+      float: left;
+      background: #6366f1;
+      margin-right: 1rem;
+    }
+    .float-right {
+      float: right;
+      background: #f59e42;
+      margin-left: 1rem;
+    }
+    .clear {
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS <code>float</code> Demo</h1>
+  <p><a href="../index.html">Back to Home</a></p>
+
+  <h2>Float left</h2>
+  <div class="float-container">
+    <div class="box float-left">float: left</div>
+    <p>
+      This text wraps around the floated box. The <code>float: left</code> property moves the box to the left, allowing inline content to flow around it. Try resizing the window to see the effect.
+    </p>
+    <div class="clear"></div>
+  </div>
+
+  <h2>Float right</h2>
+  <div class="float-container">
+    <div class="box float-right">float: right</div>
+    <p>
+      This text wraps around the floated box. The <code>float: right</code> property moves the box to the right, allowing inline content to flow around it. Try resizing the window to see the effect.
+    </p>
+    <div class="clear"></div>
+  </div>
+
+  <h2>Two floats</h2>
+  <div class="float-container">
+    <div class="box float-left">Left</div>
+    <div class="box float-right">Right</div>
+    <p>
+      Both boxes are floated, so the text wraps between them. This is a common pattern for old-school layouts and image captions.
+    </p>
+    <div class="clear"></div>
+  </div>
+
+  <h2>Clearing floats</h2>
+  <div class="float-container">
+    <div class="box float-left">float: left</div>
+    <p>
+      This paragraph is after a floated box. The <code>clear: both;</code> style below ensures that the next content starts below the floated element.
+    </p>
+    <div class="clear"></div>
+    <p>
+      This paragraph is below the cleared float.
+    </p>
+  </div>
+
+  <p>
+    The <code>float</code> property is used to position elements to the left or right, allowing text and inline content to wrap around them. The <code>clear</code> property is used to prevent content from flowing around floated elements.<br>
+    Floats are less common in modern layouts (use <code>flex</code> or <code>grid</code> instead), but are still useful for certain effects.
+  </p>
+</body>
+</html>

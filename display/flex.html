@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS flex property demo</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .row {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .flex-demo {
+      display: flex;
+      gap: 1rem;
+      background: #f3f4f6;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 2px solid #6366f1;
+      min-width: 0;
+      margin-bottom: 2rem;
+    }
+    .flex-demo.column { flex-direction: column; height: 220px; }
+    .flex-demo.wrap { flex-wrap: wrap; width: 320px; }
+    .flex-demo.align-center { align-items: center; height: 120px; }
+    .flex-demo.justify-center { justify-content: center; }
+    .flex-demo.space-between { justify-content: space-between; }
+    .box {
+      flex: 0 1 80px;
+    }
+    .box.grow {
+      flex: 1 1 0;
+      background: #16a34a;
+    }
+    .box.shrink {
+      flex: 0 1 40px;
+      background: #e63946;
+    }
+    .box.basis {
+      flex-basis: 140px;
+      background: #f59e42;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS <code>flex</code> Demo</h1>
+  <p><a href="../index.html">Back to Home</a></p>
+
+  <h2>Default flex row</h2>
+  <div class="flex-demo">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+
+  <h2>Column direction</h2>
+  <div class="flex-demo column">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+  </div>
+
+  <h2>Wrap</h2>
+  <div class="flex-demo wrap">
+    <div class="box">One</div>
+    <div class="box">Two</div>
+    <div class="box">Three</div>
+    <div class="box">Four</div>
+    <div class="box">Five</div>
+  </div>
+
+  <h2>Align items center</h2>
+  <div class="flex-demo align-center">
+    <div class="box" style="height: 40px;">Short</div>
+    <div class="box" style="height: 80px;">Tall</div>
+    <div class="box" style="height: 60px;">Medium</div>
+  </div>
+
+  <h2>Justify content center</h2>
+  <div class="flex-demo justify-center">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+  </div>
+
+  <h2>Space between</h2>
+  <div class="flex-demo space-between">
+    <div class="box">Left</div>
+    <div class="box">Middle</div>
+    <div class="box">Right</div>
+  </div>
+
+  <h2>flex-grow, flex-shrink, flex-basis</h2>
+  <div class="flex-demo">
+    <div class="box grow">flex: 1</div>
+    <div class="box shrink">flex: 0 1 40px</div>
+    <div class="box basis">flex-basis: 140px</div>
+  </div>
+
+  <p>
+    The <code>flex</code> property and related flexbox properties control layout, alignment, and sizing of items in a flex container.<br>
+    Try resizing the window to see how the boxes behave in each example.
+  </p>
+</body>
+</html>
