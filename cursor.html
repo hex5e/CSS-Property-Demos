@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS cursor property demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .row {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    /* Only keep customizations for this demo */
+    .box {
+      /* Inherit all from styles.css, but override background for demo */
+      background: #6366f1;
+    }
+    .box.pointer { background: #6366f1; }
+    .box.default { background: #64748b; }
+    .box.text { background: #16a34a; }
+    .box.move { background: #f59e42; }
+    .box.not-allowed { background: #e63946; }
+    .box.crosshair { background: #0ea5e9; }
+    .box.grab { background: #f472b6; }
+    .box.wait { background: #facc15; color: #222; }
+    .box.ew-resize { background: #a21caf; }
+    .box.ns-resize { background: #2563eb; }
+    .box.nesw-resize { background: #059669; }
+    .box.nwse-resize { background: #ea580c; }
+    .box:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS <code>cursor</code> Demo</h1>
+  <p><a href="index.html">Back to Home</a></p>
+
+  <h2>Common cursor values</h2>
+  <div class="row">
+    <div class="box pointer" style="cursor: pointer;">cursor: pointer</div>
+    <div class="box default" style="cursor: default;">cursor: default</div>
+    <div class="box text" style="cursor: text;">cursor: text</div>
+    <div class="box move" style="cursor: move;">cursor: move</div>
+    <div class="box not-allowed" style="cursor: not-allowed;">cursor: not-allowed</div>
+    <div class="box crosshair" style="cursor: crosshair;">cursor: crosshair</div>
+    <div class="box grab" style="cursor: grab;">cursor: grab</div>
+    <div class="box wait" style="cursor: wait;">cursor: wait</div>
+  </div>
+
+  <h2>Resize cursors</h2>
+  <div class="row">
+    <div class="box ew-resize" style="cursor: ew-resize;">cursor: ew-resize</div>
+    <div class="box ns-resize" style="cursor: ns-resize;">cursor: ns-resize</div>
+    <div class="box nesw-resize" style="cursor: nesw-resize;">cursor: nesw-resize</div>
+    <div class="box nwse-resize" style="cursor: nwse-resize;">cursor: nwse-resize</div>
+  </div>
+
+  <p>
+    The <code>cursor</code> property controls the mouse pointer's appearance when hovering over an element.<br>
+    Try hovering over each box to see the effect.
+  </p>
+</body>
+</html>
