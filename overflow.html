@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS overflow property demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .row {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .overflow-demo {
+      width: 180px;
+      height: 80px;
+      border: 2px solid #6366f1;
+      background: #f3f4f6;
+      color: #222;
+      margin-bottom: 1rem;
+      padding: 8px;
+      font-size: 0.98rem;
+      box-sizing: border-box;
+    }
+    .overflow-visible { overflow: visible; }
+    .overflow-hidden { overflow: hidden; }
+    .overflow-scroll { overflow: scroll; }
+    .overflow-auto   { overflow: auto; }
+    .overflow-x-scroll { overflow-x: scroll; overflow-y: hidden; }
+    .overflow-y-scroll { overflow-y: scroll; overflow-x: hidden; }
+  </style>
+</head>
+<body>
+  <h1>CSS <code>overflow</code> Demo</h1>
+  <p><a href="index.html">Back to Home</a></p>
+
+  <h2>overflow: visible (default)</h2>
+  <div class="row">
+    <div class="box overflow-visible" style="overflow: visible; border: 2px solid #6366f1; background: #f3f4f6; color: #222; width: 180px; height: 80px; padding: 8px; font-size: 0.98rem;">
+      This text will overflow the box and remain visible outside the border.<br>
+      <strong>Overflowing content! Overflowing content! Overflowing content!</strong>
+    </div>
+  </div>
+
+  <h2>overflow: hidden</h2>
+  <div class="row">
+    <div class="box overflow-hidden" style="overflow: hidden; border: 2px solid #6366f1; background: #f3f4f6; color: #222; width: 180px; height: 80px; padding: 8px; font-size: 0.98rem;">
+      This text will be clipped and hidden if it overflows the box.<br>
+      <strong>Overflowing content! Overflowing content! Overflowing content!</strong>
+    </div>
+  </div>
+
+  <h2>overflow: scroll</h2>
+  <div class="row">
+    <div class="box overflow-scroll" style="overflow: scroll; border: 2px solid #6366f1; background: #f3f4f6; color: #222; width: 180px; height: 80px; padding: 8px; font-size: 0.98rem;">
+      This box always shows scrollbars, even if not needed.<br>
+      <strong>Overflowing content! Overflowing content! Overflowing content!</strong>
+    </div>
+  </div>
+
+  <h2>overflow: auto</h2>
+  <div class="row">
+    <div class="box overflow-auto" style="overflow: auto; border: 2px solid #6366f1; background: #f3f4f6; color: #222; width: 180px; height: 80px; padding: 8px; font-size: 0.98rem;">
+      Scrollbars appear only if needed.<br>
+      <strong>Overflowing content! Overflowing content! Overflowing content!</strong>
+    </div>
+  </div>
+
+  <h2>overflow-x and overflow-y</h2>
+  <div class="row">
+    <div class="box overflow-x-scroll" style="overflow-x: scroll; overflow-y: hidden; border: 2px solid #6366f1; background: #f3f4f6; color: #222; width: 120px; height: 40px; padding: 8px; font-size: 0.98rem;">
+      This is a long line that will scroll horizontally only.
+    </div>
+    <div class="box overflow-y-scroll" style="overflow-y: scroll; overflow-x: hidden; border: 2px solid #6366f1; background: #f3f4f6; color: #222; width: 80px; height: 60px; padding: 8px; font-size: 0.98rem;">
+      Line 1<br>Line 2<br>Line 3<br>Line 4<br>Line 5<br>Line 6
+    </div>
+  </div>
+
+  <p>
+    The <code>overflow</code> property controls what happens when content does not fit in its container.<br>
+    Try resizing the window or editing the content to see how each value behaves.
+  </p>
+</body>
+</html>
