@@ -4,8 +4,8 @@ html {
 }
 
 .box {
-    width: 120px;
-    height: 80px;
+    width: 140px;
+    height: 100px;
     background-color: #555;
     color: #fff;
     display: flex;
